@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greenwich Fitness</title>
+<meta name="viewport" content="width=device-width, initialscale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+    
+<body>
+    
+ <div data-role="page" id="p9">
+
+	<div data-role="header" data-theme="b" data-position="fixed" class="ui-corner-all">
+		<h1>Suplements</h1>
+	</div>
+	
+	<div data-role="content">
+        
+		<ul id="productshome" data-role="listview" data-inset="true" data-theme="b"></ul>
+
+		
+    </div>
+     <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-corner-all ui-btn-inline " data-rel="back" data-transition="flip">Back to shop</a>
+            
+
+</div>
+
+<script>
+    $("#p9").bind("pageinit", function(e) {
+	//load in our people
+	$.get("suplements.json", {}, function(res,code) {
+        
+		var s = "";
+		for (var i = 0; i < res.length; i++) {
+            
+			s+="<li><a href='suplementsale.html?id="+res[i].id+"'>"+res[i].name+"  <img src= '" + res[i].img + "'></a></li>";
+		}
+		$("#productshome").html(s).listview("refresh");
+	}, "json");
+	
+});
+
+$(document).on("pagebeforeshow", "#homepage", function(e) {
+	var thisPage = $(this);
+	var thisUrl = thisPage.data("url");
+	var thisId = thisUrl.split("=")[1];
+	$.get("suplements"+thisId+".json", {}, function(res, code) {
+		$("h1",thisPage).text(res.name);	
+        s = '<img src= "' + res.img + '" style="width:60%; margin-left:20%; ">' + "<h1>" + res.name + "</h1>"+ "<p>" +res.Description +"</p>" +"<p>" + res.Price+"</p>";
+		$("#contentArea", thisPage).html(s);
+	}, "json");
+});
+
+</script>
+</body>
+</html>

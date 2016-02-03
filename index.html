@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greenwich Fitness</title>
+<meta name="viewport" content="width=device-width, initialscale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="panel.js"></script>
+
+</head>
+    
+<body>
+
+    
+<!--==============================================This is the first page.=======================================================-->        
+    <div data-role="page" id="p1" data-title="Home" data-theme="e" >
+        <!--Page header-->
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <!--End of page header-->
+       <!--p1 content-->
+        <div data-role="content">
+           <img src="images/1.jpg" style="width:100%">
+            <!--buton to open the company video--> 
+            <a href="#popupVideo" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-video">View video</a>
+ 
+        <!--The video popup-->
+            <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+                <!--the iframe inside the popup-->
+                <iframe src="http://player.vimeo.com/video/41135183?portrait=0" width="420" height="298" ></iframe>
+                <!--End of iframe-->
+            </div>
+         <!--End of pop up-->   
+            <p>"We’re not like other gyms. We won’t tie you into a contract. Or charge you a fortune every month. That’s because we believe that fitness should be accessible to everybody – regardless of shape, size, fitness level, background or attitude. So make yourself at home and take a look around."</p>
+           
+         <!--The sale popup inserted when the first page loads-->      
+           <div data-role="popup" id="myPopup" data-history="false" class="ui-content" data-theme="b" data-position-to="window" data-transition="slidedown" data-overlay-theme="b">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                    <img src="images/sale.jpg" style="width:100%" alt="sale">
+              
+                                             
+           </div>  
+           <!--End of popup-->
+           
+        </div>
+        <!--End of page container-->
+        <!--Page footer-->
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <!--Navbar on footer-->
+            <div data-role="navbar" class="ui-corner-all">
+                <ul>
+                <!--Links to booking for page and contact page-->
+                <li><a href="#booking">Book appointment</a></li>
+                <li><a href="#p6">Contact</a></li>
+            </ul>
+            </div>
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+        <!--End of footer-->
+    </div>
+    
+<!--===============================================The end of first page========================================================-->    
+   
+ <!--==============================================Beginning of second page=====================================================-->             
+    <div data-role="page" id="index" data-title="Gallery" data-theme="e">
+        <!--Header-->
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <!--End of header-->
+        <!--Page content-->
+        <div data-role="content">
+            <!--Images that will be used in gallery-->
+           <div class="images">
+                <img src="img/1.jpg" />
+                <img src="img/2.jpg" />
+                <img src="img/3.jpg" />
+                <img src="img/4.jpg" />
+                <img src="img/5.jpg" />
+                <img src="img/6.jpg" />
+                <img src="img/7.jpg" />
+                <img src="img/8.jpg" />
+                <img src="img/9.jpg" />
+           </div>
+            <!--The focus of the gallery-->
+            <div class="focus">
+                <div class="container"></div>
+                <!--The focus controls-->
+                    <div class="controls">
+                        <i class="close fa fa-times-circle"></i>
+                        <i class="prev fa fa-arrow-left"></i>
+                        <i class="next fa fa-arrow-right"></i>
+                    </div>
+            </div>
+           
+        </div>
+        <!--End of content-->
+        <!--Footer-->
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <!--Navbar on the footer-->
+            <div data-role="navbar" class="ui-corner-all">
+                <ul>
+                    <!--Links to booking and contact pages-->
+                <li><a href="#booking">Book appointment</a></li>
+                <li><a href="#p6">Contact</a></li>
+            </ul>
+            </div>
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+        <!--End of footer-->
+    </div>
+    
+<!--==================================================End of gallery page=======================================================-->
+
+<!--==================================================The Training page=========================================================-->
+    <div data-role="page" id="p3" data-title="Training" data-theme="e">
+        <!--Header-->
+        <div data-role="header" data-theme="b" data-position="fixed" class="ui-corner-all">
+            
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <!--End of heater-->
+        <!--Page container-->
+        <div data-role="main" class="ui-content" data-fullscreen="true">
+            <div data-role="main" class="ui-content">
+                <h4>We wellcome you to join our daily group classes or chose one of our personal trainers for one to one sessions.</h4>
+                <!--Collapsible for daily classes-->
+                <div data-role="collapsibleset" data-theme="b">
+      <div data-role="collapsible">
+        <h3>Classes</h3>
+          <!--List view with links to popups-->
+            <ul data-role="listview">
+                <li><a href="#popUpClasses1" data-rel="popup" data-position-to="window">Monday</a></li>
+                <li><a href="#popUpClasses2" data-rel="popup" data-position-to="window">Tuesday</a></li>
+                <li><a href="#popUpClasses3" data-rel="popup" data-position-to="window">Wednesday</a></li>
+                <li><a href="#popUpClasses4" data-rel="popup" data-position-to="window">Thursday</a></li>
+                <li><a href="#popUpClasses5" data-rel="popup" data-position-to="window">Friday</a></li>
+                <li><a href="#popUpClasses6" data-rel="popup" data-position-to="window">Saturday</a></li>
+                <li><a href="#popUpClasses7" data-rel="popup" data-position-to="window">Sunday</a></li>
+            </ul>
+          <!--End of listview-->
+        </div>
+            </div>
+              <!--End of collapsible--> 
+                <!--Presenting gym pictures in 2 column grids-->
+                <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="ui-bar">
+                    <img alt="alt..." src="images/classes1.jpg"/>
+
+                </div>
+            </div>
+                <div class="ui-block-b">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/classes2.jpg"/>
+
+                    </div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/classes3.jpg" />
+
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/classes4.jpg" />
+
+                    </div>
+                </div>
+                </div>
+                <!--End of grid-->
+            <!--Collapsible for trainers-->
+                <div data-role="collapsibleset" data-theme="b">    
+                    <div data-role="collapsible">
+                        <h3>Personal trainers</h3>
+                        <!--Trainers listview with links to individual popups-->
+                            <ul data-role="listview">
+                                <li><a href="#mark" data-rel="popup" data-position-to="window"><img src="images/trainer1.jpg" alt="trainer1"/>Mark</a></li>
+                                <li><a href="#james" data-rel="popup" data-position-to="window"><img src="images/trainer2.jpg" alt="trainer2"/>James</a></li>
+                                <li><a href="#maja" data-rel="popup" data-position-to="window"><img src="images/trainer3.jpg" alt="trainer3"/>Maja</a></li>
+                                <li><a href="#naomi" data-rel="popup" data-position-to="window"><img src="images/trainer4.jpg" alt="trainer4"/>Naomi</a></li>
+                                <li><a href="#david" data-rel="popup" data-position-to="window"><img src="images/trainer5.jpg" alt="trainer5"/>David</a></li>
+                            </ul>
+                        <!--End of listview-->
+                    </div>
+                </div>
+                <!--End of collapsible-->
+                
+        </div>
+       <!--Another two column grid to display images-->
+        <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="ui-bar">
+                    <img alt="alt..." src="images/personal1.jpg"/>
+
+                </div>
+            </div>
+                <div class="ui-block-b">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/personal2.jpg"/>
+
+                    </div>
+                </div>
+                <div class="ui-block-a">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/personal3.jpg" />
+
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-bar"> 
+                    <img alt="alt..." src="images/personal4.jpg" />
+
+                    </div>
+                </div>
+                </div>
+            <!--End of grid-->
+        </div>
+        <!--End of page content-->
+        <!--Individual popups for classes collapsible-->
+        <div data-role="popup" id="popUpClasses1" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Monday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <!--Buton redirecting to contact us page-->
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses2" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Tuesday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses3" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Wednesday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses4" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Thursday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses5" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Friday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses6" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Saturday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <div data-role="popup" id="popUpClasses7" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                        <h1>Sunday</h1>
+                            <ul>
+                                <li>Zumba     - 07:15-08:45</li>
+                                <li>Fast Abs  - 09:30-11:00</li>
+                                <li>Fast Core - 12:30-13:45 </li>
+                                <li>Fast Fat Burn - 16:30-17:30</li>
+                                <li>Fast Tone  - 18:45-20:00</li>
+                            </ul><br>
+            <p>In order to book your place on the chosen class please call us!</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a>
+        </div>
+        <!--End of Individual popups for classes collapsible-->
+        <!--Individual popups for trainers collapsible-->
+        <div data-role="popup" id="mark" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <h1>Mark</h1>
+                      <img src="images/trainer1.jpg" width="120">      
+            <p>At 32 years old and with over 9 years experience in the fitness industry, as well as many more as trainer and sportsman himself, Mark is fully qualified and equipped to suit your training needs. Whether it be to shed fat, build muscle, build core strength or to just get stuck into exercise for the first time, Mark has the ability to get the best out of his clients with excellent motivation, knowledge and careful planning.</p>
+            <p>Price:&pound;40 per hour</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a> 
+        </div>
+        
+        <div data-role="popup" id="james" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                
+                        <h1>James</h1>
+                      <img src="images/trainer2.jpg" width="120">      
+            <p>I will motivate and push you to reach your goals. Eating healthy and keeping fit is something I have a vast passion for, especially when I can encourage you to do the same. I am a specialist in health conditions, weight loss, body sculpting and core stability. This includes circuit training to work you hard, weight lifting to your desired physique and I will offer you nutritional advice to ensure you reach your full potential. I am fully dedicated to helping you reach your targets and you will have my support as I strongly believe training with me will make a great difference to your life.</p>
+            <p>Price:&pound;30 per hour</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a> 
+        </div>
+        
+        <div data-role="popup" id="maja" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                
+                        <h1>Maja</h1>
+                      <img src="images/trainer3.jpg" width="120">      
+            <p> Maja is a full time athlete and personal trainer with over twelve years experience. She is currently working with World-class coaches and training alongside Olympic Gold medalists and also trained for London 2012.</p>
+            <p>Price:&pound;55 per hour</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a> 
+        </div>
+        
+        <div data-role="popup" id="naomi" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                
+                        <h1>Naomi</h1>
+                      <img src="images/trainer4.jpg" width="120">      
+            <p>As a Personal Trainer, I know you want to look good, fit in nice clothes, or go back to the shape you were, before the weight crept on. And it’s absolutely possible. With my help you can drop your dress size to the one you feel perfect with. You can reshape your body. Be proud of yourself when walking on the beach. No harsh diets, or heavy workouts, just simple adjustments in your meal plan, and fun, invigorating sessions.</p>
+            <p>Price:&pound;35 per hour</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a> 
+        </div>
+        
+        <div data-role="popup" id="david" class="ui-content" data-theme="a">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                
+                        <h1>David</h1>
+                      <img src="images/trainer5.jpg" width="120">      
+            <p>Every programme begins with a detailed lifestyle and fitness analysis so I can make exercise and dietary recommendations specific to you.  My sessions include Boxercise, kettlebells, circuit-training, core work and lots more.  My training is high-intensity, effective and loads of fun!</p>
+            <p>Price:&pound;40 per hour</p>
+            <a data-role="button" href="#p6" data-transition="flip" data-theme="b">Contact Us</a> 
+        </div>
+        <!--End of individual popups for trainer collapsible-->
+        <!--Page footer-->
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+        <!--End of page footer-->
+    </div>   
+ <!--======================================================End of Training page================================================--> 
+    
+<!--=======================================================Shop page===========================================================--> 
+    <div data-role="page" id="p4" data-title="Shop" data-theme="e">
+        <!--header-->
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <div data-role="main" class="ui-content" data-fullscreen="true">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="personalequipment.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-transition="flip" data-ajax="false">Personal equipment</a><br>
+                    <img src="images/p.jpg" alt="Personal equipment" style="text-align: center;margin-left:5%;margin-right: 5%; width: 90%; ">
+                    <a href="suplementproducts.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-transition="flip" data-ajax="false">Suplements</a><br>
+                    <img src="images/s.jpg" alt="Suplements" style="text-align: center;margin-left:5%;margin-right: 5%; width: 90%; ">
+                </div>
+
+                <div class="ui-block-b">
+                    <a href="gymproducts.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-transition="flip" data-ajax="false" >Gym equipment</a><br>
+                    <img src="images/g.jpg" alt="Gym equipment" style="text-align: center;margin-right:5%;margin-left: 5%; width: 90%; ">
+                    <a href="homeproducts.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-ajax="false" data-transition="flip" data-prefetch="true" >Home equipment</a><br>
+                    <img src="images/h.jpg" alt="Home equipment" style="text-align: center;margin-left:5%;margin-right: 5%; width: 90%; ">
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+    </div>
+    <div data-role="page" id="p5" data-title="Reviews" data-theme="e">
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <div data-role="main" class="ui-content" data-fullscreen="true">
+            <p>"After LA Fitness, this gym is a breath of fresh air. An inspiring balance between working out upstairs in the gym to spending an equal amount of time in the mixed sauna, steam room working towards a final pampering in the changing rooms, where they even have magnifying mirrors for your face. Car parking is not a problem, there is also a bar. I wish I owned it." <b>Mark Twain</b></p><br>
+            <p>"Very good for the price. No frills, sauna or pool. But fine if all you want is a good workout.
+
+In need of a few back hyper extension platforms. These old school platforms are much better and safer than the naff back machines they have. These are great bits of kit, sadly forgotten in most modern gyms... I used to be a member of Virgin, and they didn't have them either." <b>Graham S.</b></p><br>
+            <p>"In my honest opinion this health club has all the technical arsenal you might need for your fitness training-the amount of high-tech machinery this gym will gaurantee that your fitness regime will go off with an almighty bang. The centre is actually located in a delightful listed building:its a converted armoury with a really high ceiling and lots of natural light. Keep in mind that it is a charity based gym and all the profits are ploughed back into providing more leisure facilities for the local community."<b>Tatiana Snow</b></p><br><br>
+            
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <div data-role="navbar">
+                <ul>
+                <li><a href="#reviewpage">Write Review</a></li>
+                <li><a href="#p6">Contact</a></li>
+            </ul>
+            </div>
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+            
+    </div>
+    
+    <div data-role="page" id="p6" data-title="Contact" data-theme="e">
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+       <div data-role="main" class="ui-content" data-fullscreen="true">
+           <h4>Address:</h4>
+           <p>Meridian House, Royal Hill, London SE10 8RD</p>
+           <p><b>Contact tel: </b> <a href="tel:020 8516 7800">020 8516 7800</a></p>
+           <p><b>Email: </b><a href="mailto:contact@greenwichfitness.co.uk">contact@greenwichfitness.co.uk</a></p>
+           <p>If you like to get directions to our place please use the Get Direction button below.</p>
+           <a href="map.html" data-role="button" data-ajax="false" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-transition="flip" >Get Direction</a>
+    </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <div data-role="navbar">
+                <ul>
+                <li><a href="#contactForm">Contact Us Form</a></li>
+                <li><a href="tel:020 8516 7800">Call Us</a></li>
+            </ul>
+            </div>
+            <h1 style="text-align:center;">
+                Copyright ACC-Mobile &copy 2015
+            </h1>
+        </div>
+    </div>
+   
+    
+
+  
+    
+   <!--Booking form page-->
+    <div data-role="page" id="booking" data-title="booking form" data-theme="e">
+        <div data-role="header" data-theme="b">
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+        </div>
+        <div data-role="main" class="ui-content" data-fullscreen="true">
+            <form id="bookform" action="#" method="post">
+            <div data-role="fieldcontain" >
+                <label for="fullname">Full name</label>
+                <input  id="fullname" name="fullname" type="text" data-theme="a" required placeholder="Please enter full name"/>
+            </div>
+            <div data-role="fieldcontain" >
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" data-theme="a" required placeholder="user@mydomain.com"/>
+            </div>
+            <div data-role="fieldcontain" >
+                <label for="tel">Telephone</label>
+                <input id="tel" name="tel" type="tel" data-theme="a" required placeholder="07xxxxxxxxx"/>
+            </div>       
+            <div data-role="fieldcontain" >
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" data-theme="a">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div> 
+            <input id="submitreview" type="submit" data-theme="a" data-transition="pop" value="Submit"/>
+            </form>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <a href="#" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-corner-all ui-btn-inline " data-rel="back" data-transition="flip">Back</a>
+    </div>
+   </div>
+    <!--End of booking form page-->
+    
+    <!--Review page form-->
+    <div data-role="page" id="reviewpage" data-title="review form" data-theme="e">
+        <div data-role="header" data-theme="b" class="ui-corner-all">
+            <h1 style="text-align:center;">
+                Greenwich Fitness
+            </h1>
+            
+        </div>
+       
+        <div data-role="main" class="ui-content" data-fullscreen="true">
+            
+            <form id="reviewform" action="#" method="post">
+                <div data-role="fieldcontain" >
+                    <label for="username">Name</label>
+                    <input id="name" name="name" type="text" required placeholder="Enter your name" data-theme="a"/>
+                </div>
+                <div data-role="fieldcontain" >
+                    <label for="reviewslabel">Review</label>
+                    <textarea id="reviews" name="review" required placeholder="Please enter your comments. Maximum 100 characters" data-theme="a">                          </textarea>
+                </div>
+                <div id="errorrev" style="color: #f00"></div>
+                <input id="submiting" type="submit" data-theme="a" data-transition="flip" value="Submit Review"/>
+            </form>
+            
+           
+    </div>
+        <div data-role="footer" data-theme="b" data-position="fixed" class="ui-corner-all">
+            <a href="#p5" class="ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-left ui-corner-all ui-btn-inline" data-transition="flip">Back to Reviews</a>
+            <a href="#p6" class="ui-btn ui-btn-right ui-corner-all ui-icon-phone ui-btn-icon-right  ui-btn-inline">Call Us</a>
+        </div>
+   
+    </div>
+    <!--End of review page-->
+        
+</body>
+</html>

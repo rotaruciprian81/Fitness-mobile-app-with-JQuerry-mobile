@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
+	id        = "greenwichfitness"
+	versionCode="1"
+	version   = "1.0">
+    <name>Greenwich Fitness</name>
+    <description>
+Greenwich Fitness App	</description>
+<author href="ciprianrotaru.wordpress.com" email="rotaruciprian81@yahoo.com">
+Radu Ciprian Rotaru
+</author>
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="winphone" />
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="disallowOverscroll" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="prerendered-icon" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="BackgroundColor" value="0xffffffff "/>
+    <preference name="KeepRunning" value="true"/>
+    
+    <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <icon src="res/icon/android/icon-144-xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <gap:plugin name="org.apache.cordova.camera"  />
+    <gap:plugin name="org.apache.cordova.geolocation"  />
+    <gap:plugin name="org.apache.cordova.dialogs"  />
+    <gap:plugin name="org.apache.cordova.device"  />
+    <gap:plugin name="org.apache.cordova.network-information"  />
+    <gap:plugin name="org.apache.cordova.console"  />
+    <gap:plugin name="org.apache.cordova.inappbrowser"  />
+    <gap:plugin name="org.apache.cordova.network-information"  />
+    <gap:plugin name="org.apache.cordova.splashscreen"  />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+    <access origin="*" subdomains="true" />
+</widget>

@@ -1,0 +1,12 @@
+[{"id":1,"name":"Men's gloves","img":"images/p1.jpg"},
+ {"id":2,"name":"Women's gloves","img":"images/p2.jpg"},
+ {"id":3,"name":"Unisex socks white","img":"images/p3.jpg"},
+ {"id":4,"name":"Unisex socks black","img":"images/p4.jpg"},
+ {"id":5,"name":"Shorts mens","img":"images/p5.jpg"},
+ {"id":6,"name":"T shirt mens - dark grey","img":"images/p6.jpg"},
+ {"id":7,"name":"T shirt mens - grey","img":"images/p7.jpg"},
+ {"id":8,"name":"Training Bra Ladies White","img":"images/p8.jpg"},
+ {"id":9,"name":"Training Bra Ladies Black","img":"images/p9.jpg"},
+ {"id":10,"name":"Tights Ladies Black","img":"images/p10.jpg"},
+ {"id":11,"name":"Tights Ladies Blue","img":"images/p11.jpg"},
+ {"id":12,"name":"T shirt womens","img":"images/p12.jpg"}]
