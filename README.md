@@ -24,8 +24,8 @@ In the page content can be seen the latest reviews left by customers and send th
 At the bottom of the page a footer had been inserted. The footer is also holding a navigation bar which hold two links. One for access the review form page, in case the user wants to live feedback, and one for the contact page. The footer also includes the buttons to access the social media pages. 
  
 The “contact” page also starts with a header, which holds the button to access the panel and the name of the company. 
-In the page content have been inserted the contact details of the company: address, email, telephone number. The telephone number it is a direct link to dial the company’s number (<a href="tel: 020 8516 7800">). Also the email address links to email provider of the user automatically inserting the company’s email into the receiver field.  
-(<a href="mailto:contact@greenwichfitness.co.uk">) 
+In the page content have been inserted the contact details of the company: address, email, telephone number. The telephone number it is a direct link to dial the company’s number. Also the email address links to email provider of the user automatically inserting the company’s email into the receiver field.  
+
 In the middle of the page a button to access the map.html external page had been inserted. The map.html will use geolocation to read the users location and to show the direction to the company’s address.  
 At the bottom of the page a footer have been introduced which will also hold the group of buttons to access the social media pages.
  
